@@ -1,0 +1,76 @@
+.container {
+   margin: 0 auto;
+   padding: 0 1.3rem;
+
+   @media screen and (min-width: $sm-screen) {
+      // 600px
+      max-width: 540px;
+   }
+
+   @media screen and (min-width: $md-screen) {
+      // 768px
+      max-width: 720px;
+   }
+
+   @media screen and (min-width: $lg-screen) {
+      // 992px
+      max-width: 960px;
+   }
+
+   @media screen and(min-width: $xl-screen) {
+      // 1200px
+      max-width: 1140px;
+   }
+
+   @media screen and(min-width: $xxl-screen) {
+      // 1400px
+      max-width: 1320px;
+   }
+}
+
+.heading-2 {
+   font-size: 3.5rem;
+   margin-bottom: 1.5rem;
+
+   @media screen and (max-width: $xs-screen) {
+      font-size: 2.8rem;
+   }
+
+   @media screen and (max-width: 360px) {
+      line-height: 1.5;
+   }
+}
+
+.heading-3 {
+   font-size: 2.3rem;
+   margin: 2.8rem 0 0.3rem;
+}
+
+// margin
+.mt-3 {
+   margin-top: 3rem;
+}
+
+.mt-4 {
+   margin-top: 4rem;
+}
+
+.mt-5 {
+   margin-top: 5rem;
+}
+
+.mr-1 {
+   margin-right: 1rem;
+}
+
+.ml-1 {
+   margin-left: 1rem;
+}
+
+.text-center {
+   text-align: center;
+}
+
+.color-white {
+   color: $white;
+}

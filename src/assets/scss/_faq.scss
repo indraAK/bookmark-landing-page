@@ -1,0 +1,87 @@
+.faq {
+   padding: 8rem 0 15rem;
+
+   .container--faq {
+      max-width: 60rem;
+   }
+
+   &__intro {
+      text-align: center;
+   }
+
+   .accordion {
+      margin-top: 5rem;
+
+      &__header {
+         border-top: 1px solid lighten($grayish-blue, $amount: 20%);
+         position: relative;
+      }
+
+      &__item {
+         &:last-child .accordion__body {
+            border-bottom: 1px solid lighten($grayish-blue, $amount: 20%);
+         }
+      }
+
+      &__trigger {
+         display: block;
+         padding: 2rem 0;
+         color: $very-dark-blue;
+         font-size: 1.8rem;
+
+         @media screen and (max-width: $sm-screen) {
+            font-size: 1.7rem;
+         }
+
+         @media screen and (max-width: $xs-screen) {
+            font-size: 1.6rem;
+         }
+
+         @media screen and (max-width: 360px) {
+            max-width: 25rem;
+            line-height: 1.5;
+         }
+
+         &:hover {
+            color: $soft-red;
+         }
+
+         &::after {
+            content: url(../images/icon-arrow.svg);
+            position: absolute;
+            top: 0;
+            right: 2rem;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            transform: rotate(0deg);
+            transition: transform 0.4s ease;
+
+            @media screen and (max-width: 360px) {
+               right: 2.5rem;
+            }
+         }
+
+         &--active::after {
+            content: url(../images/icon-arrow-red.svg);
+            transform: rotate(180deg);
+         }
+      }
+
+      &__body {
+         height: 0;
+         overflow: hidden;
+         transition: height 0.4s ease;
+
+         p {
+            font-size: 1.6rem;
+            line-height: 1.7;
+            padding: 1rem 0 3rem;
+
+            @media screen and (max-width: 375px) {
+               font-size: 1.5rem;
+            }
+         }
+      }
+   }
+}

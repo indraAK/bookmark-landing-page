@@ -1,0 +1,77 @@
+.footer {
+   background-color: $very-dark-blue;
+   padding: 5rem 0;
+
+   .container--row {
+      @include flex-align-center;
+
+      @media screen and (max-width: $md-screen) {
+         flex-direction: column;
+      }
+   }
+
+   &__logo {
+      width: 15rem;
+   }
+
+   &__links {
+      @include flex-align-center;
+      flex: 1;
+      margin-left: 7rem;
+
+      @media screen and (max-width: $md-screen) {
+         margin-left: 0;
+         margin-top: 3rem;
+      }
+
+      @media screen and (max-width: 375px) {
+         flex-direction: column;
+      }
+
+      li {
+         margin-right: 4rem;
+
+         @media screen and (max-width: $md-screen) {
+            margin-right: 0;
+            margin: 0 2rem;
+         }
+
+         @media screen and (max-width: 375px) {
+            margin-bottom: 1.3rem;
+         }
+      }
+   }
+
+   &__link {
+      @include set-nav-link;
+      color: lighten($grayish-blue, $amount: 20%);
+      font-size: 1.3rem;
+      font-weight: 400;
+   }
+
+   &__socials {
+      @include flex-align-center;
+
+      @media screen and (max-width: $md-screen) {
+         margin-top: 4rem;
+      }
+
+      .icon {
+         margin-left: 3rem;
+         line-height: 0;
+
+         @media screen and (max-width: $md-screen) {
+            margin-left: 0;
+            margin: 0 1.5rem;
+         }
+
+         &:hover {
+            svg {
+               path {
+                  fill: $soft-red;
+               }
+            }
+         }
+      }
+   }
+}

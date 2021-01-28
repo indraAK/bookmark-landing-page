@@ -1,0 +1,90 @@
+.extension {
+   padding: 10rem 0 15rem;
+
+   @media screen and (max-width: $sm-screen) {
+      padding: 7rem 0;
+   }
+
+   &__intro {
+      @include intro-center;
+   }
+
+   &__grid {
+      max-width: 102.4rem;
+      margin: 5rem auto 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3rem;
+
+      @media screen and (max-width: $lg-screen) {
+         grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media screen and (max-width: $md-screen) {
+         max-width: 35rem;
+         grid-template-columns: 1fr;
+      }
+   }
+
+   &__col {
+      &--2 {
+         transform: translateY(5rem);
+
+         @media screen and (max-width: $lg-screen) {
+            transform: translateY(0);
+         }
+      }
+
+      &--3 {
+         transform: translateY(10rem);
+
+         @media screen and (max-width: $lg-screen) {
+            transform: translateY(0) translateX(50%);
+         }
+
+         @media screen and (max-width: $md-screen) {
+            transform: translateY(0) translateX(0);
+         }
+      }
+   }
+
+   &__content {
+      min-height: 40rem;
+      background-color: $white;
+      box-shadow: 0 8px 16px 2px rgba(0, 0, 0, 0.07);
+      text-align: center;
+      border-radius: 1.5rem;
+
+      .browser-logo {
+         height: 16rem;
+         display: flex;
+         align-items: flex-end;
+         justify-content: center;
+
+         img {
+            width: 10rem;
+            margin: 0 auto;
+         }
+      }
+
+      .browser-version {
+         font-size: 1.6rem;
+      }
+
+      .cta-install {
+         padding: 2.5rem;
+         background-image: url(../images/bg-dots.svg);
+         background-repeat: no-repeat;
+         background-size: 100%;
+         background-position: left top;
+         margin-top: 4rem;
+      }
+
+      .btn--install {
+         display: block;
+         width: 100%;
+         padding: 1.7rem;
+         font-size: 1.4rem;
+      }
+   }
+}

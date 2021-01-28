@@ -1,0 +1,158 @@
+.hero {
+   min-height: 100vh;
+   position: relative;
+
+   @media screen and (max-width: $lg-screen) {
+      padding: 8rem 0;
+   }
+
+   .container {
+      height: 100vh;
+
+      @media screen and (max-width: $lg-screen) {
+         height: auto;
+      }
+   }
+
+   &__content {
+      height: 100%;
+      display: flex;
+      align-items: center;
+
+      @media screen and (max-width: $lg-screen) {
+         height: auto;
+         flex-direction: column-reverse;
+      }
+
+      & > * {
+         flex: 1;
+      }
+   }
+
+   &__intro {
+      max-inline-size: 50rem;
+
+      @media screen and (max-width: $xl-screen) {
+         max-inline-size: 40rem;
+      }
+
+      @media screen and (max-width: $lg-screen) {
+         text-align: center;
+         margin-top: 10rem;
+      }
+
+      @media screen and (max-width: $sm-screen) {
+         margin-top: 7rem;
+      }
+   }
+
+   &__title {
+      font-size: 4.3rem;
+      line-height: 1.2;
+
+      @media screen and (max-width: $sm-screen) {
+         font-size: 3.4rem;
+      }
+
+      @media screen and (max-width: 360px) {
+         font-size: 3rem;
+         line-height: 1.4;
+      }
+   }
+
+   &__description {
+      margin-top: 2rem;
+      margin-bottom: 3rem;
+   }
+
+   &__cta {
+      display: flex;
+
+      @media screen and (max-width: $lg-screen) {
+         justify-content: center;
+      }
+
+      @media screen and (max-width: 360px) {
+         flex-direction: column;
+      }
+   }
+
+   .btn--chrome,
+   .btn--firefox {
+      font-weight: $font-weight-medium;
+      padding: 1.5rem 2rem;
+
+      @media screen and (max-width: 360px) {
+         margin: 0;
+         margin-bottom: 1rem;
+         padding: 2rem;
+         font-size: 1.5rem;
+      }
+   }
+
+   .illustration-img {
+      width: 100%;
+      max-width: 60rem;
+      position: relative;
+      margin-top: 5rem;
+      margin-left: auto;
+      z-index: 1;
+
+      @media screen and (min-width: $xxl-screen) {
+         transform: scale(1.2);
+      }
+
+      @media screen and (max-width: $xl-screen) {
+         max-width: 52rem;
+         margin-right: -3rem;
+      }
+
+      @media screen and (max-width: $lg-screen) {
+         max-width: 55rem;
+         margin-right: 0;
+      }
+   }
+
+   .bg-custom {
+      position: absolute;
+      right: 0;
+      top: 45%;
+      width: 100%;
+      max-width: 40vw;
+      height: 35vmin;
+      background-color: $soft-blue;
+      border-top-left-radius: 50%;
+      border-bottom-left-radius: 50%;
+
+      @media screen and (max-width: $xxl-screen) {
+         top: 40%;
+         height: 35rem;
+      }
+
+      @media screen and (max-width: $lg-screen) {
+         top: 23rem;
+         height: 30rem;
+         max-width: 60vw;
+      }
+
+      @media screen and (max-width: $sm-screen) {
+         height: 50vmin;
+         max-width: 40rem;
+      }
+
+      @media screen and (max-width: 450px) {
+         max-width: 30rem;
+      }
+
+      @media screen and (max-width: $xs-screen) {
+         top: 20rem;
+         height: 50vmin;
+         max-width: 30rem;
+      }
+
+      @media screen and (max-width: 320px) {
+         height: 45vmin;
+         max-width: 25rem;
+      }
+   }
+}

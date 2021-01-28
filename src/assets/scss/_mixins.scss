@@ -1,0 +1,28 @@
+@mixin flex-center {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+@mixin flex-align-center {
+   display: flex;
+   align-items: center;
+}
+
+@mixin intro-center {
+   max-width: 50rem;
+   margin: 0 auto;
+   text-align: center;
+}
+
+@mixin set-nav-link {
+   font-size: 1.4rem;
+   text-transform: uppercase;
+   color: $very-dark-blue;
+   letter-spacing: 1.3px;
+   transition: color 0.1s ease-in-out;
+
+   &:hover {
+      color: $soft-red;
+   }
+}
